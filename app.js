@@ -3,8 +3,15 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT;
 
+// TODO: require('hbs')
+app.set('view engine', 'hbs');
+
 // Servir el contenido estatico
 app.use(express.static('public'));
+
+app.get('/', (req, res) => {
+    res.render('home');
+});
 
 app.get('/generic', (req, res) => {
     res.sendFile(__dirname + '/public/generic.html')
