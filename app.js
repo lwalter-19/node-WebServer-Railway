@@ -6,7 +6,7 @@ const app = express()
 const port = process.env.PORT;
 
 
-// TODO: require('hbs')
+// Handlebars
 app.set('view engine', 'hbs');
 hbs.registerPartials(__dirname + '/views/partials');
 
